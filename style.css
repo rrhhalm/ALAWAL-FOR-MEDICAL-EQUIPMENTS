@@ -1,0 +1,150 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f9f4; /* لون خلفية فاتح مريح */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* الشريط العلوي */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    color: #008C45; /* اللون الأخضر من اللوجو */
+    font-size: 24px;
+}
+
+/* الحاوية الرئيسية */
+main {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* إدارة الصفحات (إخفاء وإظهار) */
+.page {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* نصوص الترحيب */
+.welcome-text {
+    text-align: center;
+    color: #008C45;
+    margin-bottom: 10px;
+}
+
+.sub-text {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* تصميم الأيقونات (البطاقات) */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-bottom: 5px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-bottom: 5px solid #E31837; /* اللون الأحمر من اللوجو */
+}
+
+.card i {
+    font-size: 50px;
+    color: #008C45;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.card:hover i {
+    color: #E31837;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #333;
+}
+
+/* تصميم صفحات الأقسام الداخلية */
+.back-btn {
+    background-color: #008C45;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #006633;
+}
+
+#devices-page h2, #tools-page h2, #services-page h2 {
+    color: #008C45;
+    margin-bottom: 15px;
+}
+
+/* تذييل الصفحة */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
