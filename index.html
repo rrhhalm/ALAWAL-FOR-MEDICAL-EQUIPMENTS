@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأول للتجهيزات الطبية</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- مكتبة الأيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- الشريط العلوي -->
+    <header>
+        <div class="logo-container">
+            <!-- ضع الصورة المرفقة في نفس المجلد باسم logo.png-->
+            <img src="logo.png" alt="شعار الأول للتجهيزات الطبية" class="logo">
+            <h1>شركة الأول للتجهيزات الطبية</h1>
+        </div>
+    </header>
+
+    <!-- الحاوية الرئيسية -->
+    <main id="app-container">
+        
+        <!-- الصفحة الرئيسية -->
+        <section id="home-page" class="page active">
+            <h2 class="welcome-text">مرحباً بكم في الأول للتجهيزات الطبية</h2>
+            <p class="sub-text">اختر القسم الذي تريد استكشافه</p>
+            
+            <div class="cards-container">
+                <!-- ايقونة أجهزة طبية -->
+                <div class="card" onclick="navigateTo('devices-page')">
+                    <i class="fa-solid fa-hospital-user"></i>
+                    <h3>أجهزة طبية</h3>
+                </div>
+
+                <!-- ايقونة أدوات طبية -->
+                <div class="card" onclick="navigateTo('tools-page')">
+                    <i class="fa-solid fa-syringe"></i>
+                    <h3>أدوات طبية</h3>
+                </div>
+
+                <!-- ايقونة خدمات طبية -->
+                <div class="card" onclick="navigateTo('services-page')">
+                    <i class="fa-solid fa-stethoscope"></i>
+                    <h3>خدمات طبية</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- صفحة الأجهزة الطبية -->
+        <section id="devices-page" class="page">
+            <button class="back-btn" onclick="navigateTo('home-page')">
+                <i class="fa-solid fa-arrow-right"></i> العودة للرئيسية
+            </button>
+            <h2>الأجهزة الطبية</h2>
+            <p>هنا يمكنك عرض أحدث الأجهزة الطبية المتوفرة لدينا...</p>
+            <!-- يمكنك إضافة المحتوى هنا لاحقاً -->
+        </section>
+
+        <!-- صفحة الأدوات الطبية -->
+        <section id="tools-page" class="page">
+            <button class="back-btn" onclick="navigateTo('home-page')">
+                <i class="fa-solid fa-arrow-right"></i> العودة للرئيسية
+            </button>
+            <h2>الأدوات الطبية</h2>
+            <p>هنا يمكنك عرض المستلزمات والأدوات الطبية عالية الجودة...</p>
+        </section>
+
+        <!-- صفحة الخدمات الطبية -->
+        <section id="services-page" class="page">
+            <button class="back-btn" onclick="navigateTo('home-page')">
+                <i class="fa-solid fa-arrow-right"></i> العودة للرئيسية
+            </button>
+            <h2>الخدمات الطبية</h2>
+            <p>هنا يمكنك عرض الخدمات الطبية التي تقدمها الشركة...</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024 شركة الأول للتجهيزات الطبية</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
